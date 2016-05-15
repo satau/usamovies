@@ -17,6 +17,7 @@
 		BA3153501CE8D9130074371B /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA31534F1CE8D9130074371B /* APIManager.swift */; };
 		BA3153531CE8D9BB0074371B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3153521CE8D9BB0074371B /* Constants.swift */; };
 		BA3153551CE8DA080074371B /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3153541CE8DA080074371B /* Movies.swift */; };
+		BA31535F1CE8F58A0074371B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = BA31535E1CE8F58A0074371B /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,9 @@
 		BA31534F1CE8D9130074371B /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		BA3153521CE8D9BB0074371B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BA3153541CE8DA080074371B /* Movies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
+		BA31535C1CE8F58A0074371B /* USAMovies-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "USAMovies-Bridging-Header.h"; sourceTree = "<group>"; };
+		BA31535D1CE8F58A0074371B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		BA31535E1CE8F58A0074371B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 		BA31531C1CE8D26B0074371B /* USAMovies */ = {
 			isa = PBXGroup;
 			children = (
+				BA31535B1CE8F5780074371B /* Obj-c */,
 				BA3153511CE8D9AA0074371B /* Utils */,
 				BA31534E1CE8D3020074371B /* View */,
 				BA31534D1CE8D2E40074371B /* Model */,
@@ -172,6 +177,16 @@
 				BA3153521CE8D9BB0074371B /* Constants.swift */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		BA31535B1CE8F5780074371B /* Obj-c */ = {
+			isa = PBXGroup;
+			children = (
+				BA31535D1CE8F58A0074371B /* Reachability.h */,
+				BA31535E1CE8F58A0074371B /* Reachability.m */,
+				BA31535C1CE8F58A0074371B /* USAMovies-Bridging-Header.h */,
+			);
+			name = "Obj-c";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +327,7 @@
 				BA3153501CE8D9130074371B /* APIManager.swift in Sources */,
 				BA3153201CE8D26B0074371B /* ViewController.swift in Sources */,
 				BA31531E1CE8D26B0074371B /* AppDelegate.swift in Sources */,
+				BA31535F1CE8F58A0074371B /* Reachability.m in Sources */,
 				BA3153531CE8D9BB0074371B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,10 +472,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = USAMovies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = auersh.com.USAMovies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "USAMovies/USAMovies-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -467,10 +486,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = USAMovies/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = auersh.com.USAMovies;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "USAMovies/USAMovies-Bridging-Header.h";
 			};
 			name = Release;
 		};
