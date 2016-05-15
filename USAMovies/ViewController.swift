@@ -30,6 +30,8 @@ class ViewController: UIViewController {
             print("\(index) name = \(item.vName)")
         }
         
+        print(reachabilityStatus)
+        
     }
 }
 
