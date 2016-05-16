@@ -18,6 +18,7 @@
 		BA3153531CE8D9BB0074371B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3153521CE8D9BB0074371B /* Constants.swift */; };
 		BA3153551CE8DA080074371B /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3153541CE8DA080074371B /* Movies.swift */; };
 		BA31535F1CE8F58A0074371B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = BA31535E1CE8F58A0074371B /* Reachability.m */; };
+		BAA349701CEA0EC100EB051C /* MoviesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA3496F1CEA0EC100EB051C /* MoviesTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		BA31535C1CE8F58A0074371B /* USAMovies-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "USAMovies-Bridging-Header.h"; sourceTree = "<group>"; };
 		BA31535D1CE8F58A0074371B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		BA31535E1CE8F58A0074371B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		BAA3496F1CEA0EC100EB051C /* MoviesTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				BA31531F1CE8D26B0074371B /* ViewController.swift */,
+				BAA3496F1CEA0EC100EB051C /* MoviesTVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				BA3153201CE8D26B0074371B /* ViewController.swift in Sources */,
 				BA31531E1CE8D26B0074371B /* AppDelegate.swift in Sources */,
 				BA31535F1CE8F58A0074371B /* Reachability.m in Sources */,
+				BAA349701CEA0EC100EB051C /* MoviesTVC.swift in Sources */,
 				BA3153531CE8D9BB0074371B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -560,6 +564,7 @@
 				BA3153441CE8D26C0074371B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA3153451CE8D26C0074371B /* Build configuration list for PBXNativeTarget "USAMoviesTests" */ = {
 			isa = XCConfigurationList;
@@ -568,6 +573,7 @@
 				BA3153471CE8D26C0074371B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BA3153481CE8D26C0074371B /* Build configuration list for PBXNativeTarget "USAMoviesUITests" */ = {
 			isa = XCConfigurationList;
@@ -576,6 +582,7 @@
 				BA31534A1CE8D26C0074371B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
