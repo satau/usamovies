@@ -18,6 +18,7 @@
 		BA3153531CE8D9BB0074371B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3153521CE8D9BB0074371B /* Constants.swift */; };
 		BA3153551CE8DA080074371B /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3153541CE8DA080074371B /* Movies.swift */; };
 		BA31535F1CE8F58A0074371B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = BA31535E1CE8F58A0074371B /* Reachability.m */; };
+		BA83E2A21CEA4A020000A500 /* MoviesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA83E2A11CEA4A020000A500 /* MoviesTableViewCell.swift */; };
 		BAA349701CEA0EC100EB051C /* MoviesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA3496F1CEA0EC100EB051C /* MoviesTVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		BA31535C1CE8F58A0074371B /* USAMovies-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "USAMovies-Bridging-Header.h"; sourceTree = "<group>"; };
 		BA31535D1CE8F58A0074371B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		BA31535E1CE8F58A0074371B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		BA83E2A11CEA4A020000A500 /* MoviesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesTableViewCell.swift; sourceTree = "<group>"; };
 		BAA3496F1CEA0EC100EB051C /* MoviesTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -152,6 +154,7 @@
 			children = (
 				BA31531F1CE8D26B0074371B /* ViewController.swift */,
 				BAA3496F1CEA0EC100EB051C /* MoviesTVC.swift */,
+				BA83E2A11CEA4A020000A500 /* MoviesTableViewCell.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 			files = (
 				BA3153551CE8DA080074371B /* Movies.swift in Sources */,
 				BA3153501CE8D9130074371B /* APIManager.swift in Sources */,
+				BA83E2A21CEA4A020000A500 /* MoviesTableViewCell.swift in Sources */,
 				BA3153201CE8D26B0074371B /* ViewController.swift in Sources */,
 				BA31531E1CE8D26B0074371B /* AppDelegate.swift in Sources */,
 				BA31535F1CE8F58A0074371B /* Reachability.m in Sources */,

@@ -10,6 +10,8 @@ import Foundation
 
 class Movies {
     
+    var vRank = 0
+    
     // Data Encapsulation
     private var _vName:String
     private var _vVideoUrl:String
