@@ -17,15 +17,22 @@ class MoviesTVC: UITableViewController {
         
         // compile time swift version checking
         #if swift(>=2.2)
-            NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.reachabilityStatusChanged), name: "ReachStatusChanged", object: nil)
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MoviesTVC.reachabilityStatusChanged), name: "ReachStatusChanged", object: nil)
         #else
             NSNotificationCenter.defaultCenter().addObserver(self, selector: "reachabilityStatusChanged", name: "ReachStatusChanged", object: nil)
+        #endif
+        
+        
+        #if swift(>=2.2)
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(MoviesTVC.preferredFontChanged), name: UIContentSizeCategoryDidChangeNotification, object: nil)
+        #else
+            NSNotificationCenter.defaultCenter().addObserver(self, selector: "preferredFontChange", name: UIContentSizeCategoryDidChangeNotification, object: nil)
         #endif
         
         self.tableView.rowHeight = 120.0
         reachabilityStatusChanged()
         
-           }
+    }
     
     func didLoadData(movies: [Movies]) {
         self.movies = movies
@@ -36,6 +43,10 @@ class MoviesTVC: UITableViewController {
             print("\(index) name = \(item.vName)")
         }
         tableView.reloadData()
+    }
+    
+    func preferredFontChanged(){
+        print("preferred font is changed")
     }
     
     func reachabilityStatusChanged(){
