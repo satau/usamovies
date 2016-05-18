@@ -98,6 +98,7 @@ class MoviesTVC: UITableViewController {
     // Is called just as the object is about to be deallocated
     deinit{
         NSNotificationCenter.defaultCenter().removeObserver(self, name: "ReachStatusChanged", object: nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIContentSizeCategoryDidChangeNotification, object: nil)
     }
 
     // MARK: - Table view data source
@@ -113,14 +114,25 @@ class MoviesTVC: UITableViewController {
     }
     
     private struct storyboard {
-        static let cellReuseIndentifier = "cell"
+        static let cellReuseIdentifier = "cell"
+        static let detailReuseIdentifier = "musicDetail"
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(storyboard.cellReuseIndentifier, forIndexPath: indexPath) as! MoviesTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(storyboard.cellReuseIdentifier, forIndexPath: indexPath) as! MoviesTableViewCell
         cell.movies = movies[indexPath.row]
         return cell
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == storyboard.detailReuseIdentifier{
+            if let indexpath = tableView.indexPathForSelectedRow{
+                let movie = movies[indexpath.row]
+                let dvc = segue.destinationViewController as! MoviesDetailsTVC
+                dvc.movie = movie
+            }
+        }
     }
     
 
